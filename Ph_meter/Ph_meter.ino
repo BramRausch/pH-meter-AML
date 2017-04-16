@@ -36,7 +36,7 @@ void AzureMLPost(String payload){
     StaticJsonBuffer<400> jsonBuffer;
     JsonObject& root = jsonBuffer.parseObject(response);
     float ph = root["Results"]["output1"]["value"]["Values"][0][6];
-    Serial.print("Ph: "); Serial.println(ph);
+    Serial.print("pH: "); Serial.println(ph);
   }else {
     Serial.println("Error in HTTP request");
   }
